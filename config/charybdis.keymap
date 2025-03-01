@@ -160,7 +160,6 @@ MOUSE {
                                 &mkp MCLK  &none        &none
             >;
 
-            trackball-bindings = <&tmv_coarse>;
         };
 
         GAM {
