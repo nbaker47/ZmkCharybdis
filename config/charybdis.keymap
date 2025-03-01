@@ -17,7 +17,7 @@
     trackball_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <0 2>;
+        layers = <0 5>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -32,7 +32,7 @@
     trackball_snipe_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <3>;
+        layers = <9>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -45,7 +45,7 @@
     trackball_scroll_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
-        layers = <1>;
+        layers = <8>;
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_MISC>;
         y-input-code = <INPUT_REL_WHEEL>;
@@ -84,10 +84,6 @@
             flavor = "tap-preferred";
         }; 
     };
-
-// #define DEF 0
-// #define MOD 1
-// #define BTMD 2
 
     keymap {
         compatible = "zmk,keymap";
@@ -155,9 +151,9 @@ MOUSE {
 &none  &none  &none  &none      &none      &none        &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none      &none      &none        &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none      &none      &none        &none  &none  &none  &none  &none  &none
-&none  &none  &none  &none      &none      &none        &none  &none  &none  &none  &none  &none
-                     &mkp RCLK  &none      &mkp LCLK    &none  &none
-                                &mkp MCLK  &none        &none
+&none  &none  &none  &mo 9      &none      &none        &none  &none  &none  &none  &none  &none
+                     &mkp MCLK  &mo 8      &mkp LCLK    &none  &none
+                                &none      &none        &none
             >;
 
         };
@@ -182,6 +178,32 @@ MOUSE {
                               &kp LCTRL  &kp SPACE  &kp LEFT_SHIFT    &kp DELETE     &kp BACKSPACE
                                          &trans     &trans            &kp RIGHT_ALT
             >;
+        };
+
+        DRAG {
+            bindings = <
+&none  &none  &none  &none      &none      &none        &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none      &none      &none        &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none      &none      &none        &none  &none  &none  &none  &none  &none
+&none  &none  &none  &mo 9      &none      &none        &none  &none  &none  &none  &none  &none
+                     &mkp MCLK  &trans      &mkp LCLK    &none  &none
+                                &none  &none        &none
+            >;
+
+        };
+
+        // New sniping layer (layer 9)
+
+        SNIP {
+            bindings = <
+&none  &none  &none  &none      &none      &none        &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none      &none      &none        &none  &none  &none  &none  &none  &none
+&none  &none  &none  &none      &none      &none        &none  &none  &none  &none  &none  &none
+&none  &none  &none  &trans      &none      &none        &none  &none  &none  &none  &none  &none
+                     &mkp MCLK  &mo 8      &mkp LCLK    &none  &none
+                                &none  &none        &none
+            >;
+
         };
 
     };
