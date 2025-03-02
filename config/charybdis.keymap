@@ -186,7 +186,7 @@ MOUSE {
 &none  &none  &none  &none      &none      &none        &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none      &none      &none        &none  &none  &none  &none  &none  &none
 &none  &none  &none  &mo 9      &none      &none        &none  &none  &none  &none  &none  &none
-                     &mkp MCLK  &trans      &mkp LCLK    &none  &none
+                     &mkp RCLK  &trans      &mkp LCLK    &none  &none
                                 &none  &none        &none
             >;
 
@@ -200,7 +200,7 @@ MOUSE {
 &none  &none  &none  &none      &none      &none        &none  &none  &none  &none  &none  &none
 &none  &none  &none  &none      &none      &none        &none  &none  &none  &none  &none  &none
 &none  &none  &none  &trans      &none      &none        &none  &none  &none  &none  &none  &none
-                     &mkp MCLK  &mo 8      &mkp LCLK    &none  &none
+                     &mkp RCLK  &mo 8      &mkp LCLK    &none  &none
                                 &none  &none        &none
             >;
 
